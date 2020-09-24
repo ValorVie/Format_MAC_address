@@ -14,7 +14,7 @@ def format_mac(mac:str) -> str:
         # convert mac in canonical form (eg. 00:80:41:ae:fd:7e)
         mac = ":".join(["%s" % (mac[i:i + 2]) for i in range(0, 12, 2)])
     return mac
-
+#test
 print('請輸入MAC address:')
 lst = []
 while True:
