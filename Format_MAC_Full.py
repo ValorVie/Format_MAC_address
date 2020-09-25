@@ -4,6 +4,9 @@ import win32con
 #str='18-31-BF-D0-67-98'
 #print(len(str))
 
+# reference
+# https://stackoverflow.com/a/29446103
+
 def format_mac(mac:str) -> str:
     if len(mac) == 17:
         mac = re.sub('[-:.]', '', mac).lower() # remove delimiters and convert to lower case
@@ -45,3 +48,10 @@ print('Bye!')
 #     if a == "exit":
 #         exit()
 #     print(b)
+
+# output exclude
+# pip install pyinstaller
+# -h :help
+# -F :將程式打包成單一執行檔(適合較簡易的代碼或只有單一.py檔)
+# -D :打包多個文件，exe檔及依賴的東西會一起放置在dist資料夾內(適合框架形式的程式)
+# pyinstaller -F Format_MAC_Full.py
